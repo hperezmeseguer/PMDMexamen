@@ -2,11 +2,11 @@ package org.example
 
 var nivel_actual: Int = 0
 
-var estado_acual: Estados = Estados.Idle
+var estado_actual: Estados = Estados.Idle
 
 
 fun gestor(): Int {
-    when (estado_acual) {
+    when (estado_actual) {
 
         is Estados.Idle -> {
             return nivel_actual
