@@ -16,7 +16,7 @@ sealed class Estados {
             }
         }
 
-        fun error(){
+        fun fallo(){
             estado_actual = Error
         }
     }
@@ -28,7 +28,7 @@ sealed class Estados {
             estado_actual = Idle
         }
 
-        fun error(){
+        fun fallo(){
             estado_actual = Error
         }
     }
@@ -40,12 +40,16 @@ sealed class Estados {
             estado_actual = Idle
         }
 
-        fun error(){
+        fun fallo(){
             estado_actual = Error
         }
     }
 
     object Error : Estados(){
+
+        fun fallo(){
+            estado_actual = Error
+        }
     }
 }
 
