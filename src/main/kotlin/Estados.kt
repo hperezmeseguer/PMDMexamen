@@ -2,7 +2,6 @@ package org.example
 
 sealed class Estados {
 
-
     object Idle : Estados(){
 
         fun nivel_0(){
@@ -34,7 +33,6 @@ sealed class Estados {
         }
     }
 
-
     object MovingDOWN : Estados() {
 
         fun llegada_nivel_0(){
@@ -46,6 +44,7 @@ sealed class Estados {
             estado_actual = Error
         }
     }
+
     object Error : Estados(){
     }
 }
