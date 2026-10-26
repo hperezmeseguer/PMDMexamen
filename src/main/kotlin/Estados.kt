@@ -36,6 +36,15 @@ sealed class Estados {
 
 
     object MovingDOWN : Estados() {
+
+        fun llegada_nivel_0(){
+            nivel_actual = 0
+            estado_actual = Idle
+        }
+
+        fun error(){
+            estado_actual = Error
+        }
     }
     object Error : Estados(){
     }
