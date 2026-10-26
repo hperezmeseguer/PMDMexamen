@@ -22,9 +22,23 @@ sealed class Estados {
         }
     }
 
-    object MovingUP : Estados()
-    object MovingDOWN : Estados()
-    object Error : Estados()
+    object MovingUP : Estados(){
+
+        fun llegada_nivel_1(){
+            nivel_actual = 1
+            estado_actual = Idle
+        }
+
+        fun error(){
+            estado_actual = Error
+        }
+    }
+
+
+    object MovingDOWN : Estados() {
+    }
+    object Error : Estados(){
+    }
 }
 
 
